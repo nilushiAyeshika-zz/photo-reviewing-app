@@ -7,7 +7,7 @@ const ApprovedPhotosStyles = styled.div`
   margin: 2rem 0;
 
   &.has-more-data {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .slick-prev:before, .slick-next:before {
@@ -44,7 +44,7 @@ const ApprovedPhotosStyles = styled.div`
     svg {
       color: ${appTheme.colors.TYPOGRAPHY_LIGHT};
       position: absolute;
-      right: 1.2rem;
+      right: 0.9rem;
       top: 0;
       z-index: 2;
       font-size: 1.2rem;

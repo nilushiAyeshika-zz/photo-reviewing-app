@@ -41,7 +41,7 @@ export const appTheme = {
   addMoreContainer: {
     small: {
       height: '5rem',
-      width: '7rem',
+      width: '8rem',
       fontSize: '2rem',
     },
     large: {
@@ -54,7 +54,7 @@ export const appTheme = {
   photoItem: {
     small: {
       height: '5rem',
-      width: '7rem',
+      width: '8rem',
     },
     large: {
       height: '40rem',
