@@ -4,13 +4,7 @@ import { DividerProps } from './Divider.types'
 import DividerStyles from './Divider.theme'
 
 const Divider: React.FC<DividerProps> = (props) => {
-  const {
-    className,
-    width,
-    height,
-    backgroundColor,
-    margin,
-  } = props
+  const { className, width, height, backgroundColor, margin } = props
 
   return (
     <DividerStyles

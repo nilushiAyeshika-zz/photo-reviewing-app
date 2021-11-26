@@ -22,5 +22,5 @@ export interface ButtonProps {
   hoverColor?: ColorType
   size?: TextSizeType
   type?: 'button' | 'reset' | 'submit'
-  variation?: 'primary'| 'secondary' | 'text' | 'warning'
+  variation?: 'primary' | 'secondary' | 'text' | 'warning'
 }

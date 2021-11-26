@@ -27,4 +27,3 @@ const PhotoReviewWrapperStyles = styled.div`
 `
 
 export default PhotoReviewWrapperStyles
-

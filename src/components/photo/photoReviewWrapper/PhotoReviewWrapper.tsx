@@ -1,12 +1,14 @@
 import { FC, useContext } from 'react'
 import { useSelector } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 import { PhotoContext } from '../../../containers/photo/PhotoContext'
-import AddMorePhotos from '../../addMorePhotos/AddMorePhotos'
+import AddMorePhotos from '../addMorePhotos/AddMorePhotos'
 import PhotoReviewConfirmation from '../photoReviewConfirmation/PhotoReviewConfirmation'
-import Divider from '../../shared/divider/Divider.component'
-import Grid from '../../layout/grid/Grid.component'
-import Text from '../../core/text/Text.component'
+import Divider from '../../shared/divider/Divider'
+import Grid from '../../layout/grid/Grid'
+import Text from '../../core/text/Text'
 import PhotoContentLoader from '../../photoContentLoader/PhotoContentLoader'
 import ApprovedPhotosSlider from '../approvedPhotosSlider/ApprovedPhotosSlider'
 
@@ -17,18 +19,36 @@ const PhotoReviewWrapper: FC = () => {
   const { approvedPhotos } = useSelector((state: any) => state.photos)
 
   return (
-    <PhotoReviewWrapperStyles data-test="photo-review-component">
+    <PhotoReviewWrapperStyles data-test="photo-review-wrapper">
       <Grid direction="column">
-        <Text color="typo-primary" weight="bold" size="l">IMAGE APPROVAL APPLICATION</Text>
+        <Text color="typo-primary" weight="bold" size="l" data-test="photo-review-header">
+          IMAGE APPROVAL APPLICATION
+        </Text>
         <Divider margin="1rem 0" />
-        <Text color="typo-primary" weight="bold" size="m" letterSpacing="0.05rem">APPROVED IMAGES ({approvedPhotos.length})</Text>
+        <Text
+          color="typo-primary"
+          weight="bold"
+          size="m"
+          letterSpacing="0.05rem"
+          data-test="approved-list-header"
+        >
+          APPROVED IMAGES ({approvedPhotos.length})
+        </Text>
         {approvedPhotos.length > 0 ? (
-          <ApprovedPhotosSlider approvedPhotos={approvedPhotos} />
+          <ApprovedPhotosSlider
+            approvedPhotos={approvedPhotos}
+            data-test="approved-photo-slider-component"
+          />
         ) : (
-          <AddMorePhotos size="small" margin="2rem 0" onAddMore={handleAddPhotoClick} />
+          <AddMorePhotos
+            size="small"
+            margin="2rem 0"
+            onAddMore={handleAddPhotoClick}
+            data-test="add-photo-component-top"
+          />
         )}
       </Grid>
-      <Divider />
+      <Divider data-test="divider-component" />
 
       <Grid direction="column" alignItems="center">
         {isPhotoLoading ? (
@@ -36,15 +56,23 @@ const PhotoReviewWrapper: FC = () => {
         ) : (
           <Grid direction="column">
             {randomPhotoData.id !== '' ? (
-              <PhotoReviewConfirmation />
+              <PhotoReviewConfirmation data-test="photo-review-confirmation-component" />
             ) : (
               <>
                 <Grid justifyContent="center" className="add-main-wrapper">
-                  <AddMorePhotos size="large" margin="2rem 0" onAddMore={handleAddPhotoClick} />
+                  <AddMorePhotos
+                    size="large"
+                    margin="2rem 0"
+                    onAddMore={handleAddPhotoClick}
+                    data-test="add-photo-component-main"
+                  />
                 </Grid>
 
                 <Divider />
-                <Text textAlign="center" margin="4rem 0">Click on the + in order to get image recommendations</Text>
+                <Text textAlign="center" margin="4rem 0" data-test="photo-review-note">
+                  Click on the <FontAwesomeIcon icon={faPlus} /> in order to get image
+                  recommendations
+                </Text>
               </>
             )}
           </Grid>

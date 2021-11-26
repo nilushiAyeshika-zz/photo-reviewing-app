@@ -7,7 +7,7 @@ const PhotoReviewScreen: FC = () => {
   return (
     <PhotoProvider>
       <div data-test="photo-review-screen">
-        <PhotoReviewWrapper />
+        <PhotoReviewWrapper data-test="photo-review-component" />
       </div>
     </PhotoProvider>
   )

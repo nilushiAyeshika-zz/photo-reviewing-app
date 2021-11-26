@@ -1,9 +1,5 @@
 import styled from 'styled-components'
 
-// import { getColor, getFontSize } from '../../../utils/Theme.utils'
-
-// import { ButtonProps } from './Button.types'
-
 const MainStyles = styled.div`
   width: 100%;
   display: flex;
@@ -12,4 +8,3 @@ const MainStyles = styled.div`
 `
 
 export default MainStyles
-

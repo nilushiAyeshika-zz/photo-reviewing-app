@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { appTheme  } from '../../../theme/Theme'
+import { appTheme } from '../../../theme/Theme'
 
 const ApprovedPhotosStyles = styled.div`
   display: block;
@@ -58,4 +58,3 @@ const ApprovedPhotosStyles = styled.div`
 `
 
 export default ApprovedPhotosStyles
-

@@ -59,12 +59,7 @@ export const getColor = (color: ColorType) => {
   }
 }
 
-export type Variation =
-  | 'primary'
-  | 'secondary'
-  | 'text'
-  | 'warning'
-  | undefined
+export type Variation = 'primary' | 'secondary' | 'text' | 'warning' | undefined
 
 export const getBackgroundColor = (variation: Variation) => {
   switch (variation) {
@@ -96,10 +91,7 @@ export const getHoverColor = (variation: Variation) => {
   }
 }
 
-export type AddMoreSize =
-  | 'small'
-  | 'large'
-  | undefined
+export type AddMoreSize = 'small' | 'large' | undefined
 
 export const getAddMoreContainerHeight = (size: AddMoreSize) => {
   switch (size) {
@@ -134,10 +126,7 @@ export const getAddMoreContainerFontSize = (size: AddMoreSize) => {
   }
 }
 
-export type PhotoSize =
-  | 'small'
-  | 'large'
-  | undefined
+export type PhotoSize = 'small' | 'large' | undefined
 
 export const getPhotoItemHeight = (size: PhotoSize) => {
   switch (size) {

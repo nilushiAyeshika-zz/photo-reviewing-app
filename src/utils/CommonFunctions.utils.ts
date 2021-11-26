@@ -3,11 +3,11 @@
  * @param value
  * @param arr
  */
-export const checkValueExits = (value: any, arr: any) => {
+export const checkValueExits = (value: string, arr: any) => {
   var status = false
   for (var i = 0; i < arr.length; i++) {
-    var name = arr[i]
-    if (name === value) {
+    var id = arr[i]
+    if (id === value) {
       status = true
       break
     }

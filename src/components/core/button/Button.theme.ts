@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-import { getColor, getFontSize, getBackgroundColor, getHoverColor } from '../../../utils/Theme.utils'
+import {
+  getColor,
+  getFontSize,
+  getBackgroundColor,
+  getHoverColor,
+} from '../../../utils/Theme.utils'
 
 import { ButtonProps } from './Button.types'
 
@@ -11,9 +16,7 @@ const ButtonStyles = styled.button<ButtonProps>`
   justify-content: center;
   font-weight: ${(props) => props.theme.fontWeight.FONT_WEIGHT_MEDIUM};
   color: ${(props) => getColor(props.textColor) || props.theme.colors.TYPOGRAPHY_LIGHT};
-  ${(props) => props.variation && (
-    `background: ${getBackgroundColor(props.variation)};`
-  )};
+  ${(props) => props.variation && `background: ${getBackgroundColor(props.variation)};`};
   border: none;
   cursor: pointer;
   padding: ${(props) => (props.padding ? props.padding : '0.5rem 1.5rem')};
@@ -26,8 +29,7 @@ const ButtonStyles = styled.button<ButtonProps>`
   font-size: ${(props) => (props.size ? getFontSize(props.size) : '1.4rem')};
 
   &:hover {
-    background: ${(props) =>
-      getColor(props.hoverColor) || getHoverColor(props.variation)};
+    background: ${(props) => getColor(props.hoverColor) || getHoverColor(props.variation)};
   }
 
   &:disabled {

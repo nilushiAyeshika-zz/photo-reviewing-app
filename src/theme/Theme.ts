@@ -48,7 +48,7 @@ export const appTheme = {
       height: '40rem',
       width: '100%',
       fontSize: '6rem',
-    }
+    },
   },
 
   photoItem: {
@@ -58,9 +58,9 @@ export const appTheme = {
     },
     large: {
       height: '40rem',
-      width: 'auto'
-    }
-  }
+      width: 'auto',
+    },
+  },
 }
 
 export type AppTheme = typeof appTheme

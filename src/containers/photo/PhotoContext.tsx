@@ -47,13 +47,12 @@ const PhotoProvider = (props: { children: any }) => {
    */
   const fetchRandomPhoto = async () => {
     try {
-      const { data }:any = await PhotoApi.getRandomPhoto()
-      console.log(data)
-      const photoData:IPhoto = {
-        id : data.id,
+      const { data }: any = await PhotoApi.getRandomPhoto()
+      const photoData: IPhoto = {
+        id: data.id,
         description: data.description,
         thumbUrl: data?.urls?.thumb,
-        regularUrl: data?.urls?.small
+        regularUrl: data?.urls?.small,
       }
       if (!checkValueExits(photoData.id, rejectedPhotos)) {
         setRandomPhotoData(photoData)

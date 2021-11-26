@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { ToastContainer } from 'react-toastify'
 
 import RouteConfig from '../../../routeConfig/RouteConfig'
@@ -6,7 +6,7 @@ import RouteConfig from '../../../routeConfig/RouteConfig'
 import MainStyles from './Main.theme'
 import 'react-toastify/dist/ReactToastify.css'
 
-const Routes: FC = () => {
+const Main: FC = () => {
   return (
     <MainStyles className="main-wrapper" data-test="main-container">
       <RouteConfig data-test="route-config-component" />
@@ -15,4 +15,4 @@ const Routes: FC = () => {
   )
 }
 
-export default Routes
+export default Main
