@@ -1,6 +1,7 @@
 import { FC, useCallback } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import classnames from 'classnames'
 
 import Button from '../../core/button/Button'
 
@@ -17,7 +18,7 @@ const AddMorePhotos: FC<AddMorePhotosProps> = (props) => {
   return (
     <AddMorePhotoStyles
       data-test="add-more-photo-wrapper"
-      className={className}
+      className={classnames(className, size === 'large' ? 'container-large' : 'container-small')}
       size={size}
       margin={margin}
     >

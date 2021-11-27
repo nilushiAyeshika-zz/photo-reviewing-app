@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import classnames from 'classnames'
 
 import IPhotoItem from './PhotoItem.types'
 import PhotoItemStyles from './PhotoItem.theme'
@@ -9,7 +10,7 @@ const PhotoItem: FC<IPhotoItem> = (props) => {
   return (
     <PhotoItemStyles
       data-test="photo-item-component"
-      className={className}
+      className={classnames(className, size === 'large' ? 'image-large' : 'image-small')}
       size={size}
       imgSrc={imgSrc}
       imgName={imgName}

@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-import {
-  getAddMoreContainerHeight,
-  getAddMoreContainerWidth,
-  getAddMoreContainerFontSize,
-} from '../../../utils/Theme.utils'
-
 import AddMorePhotosProps from './AddMorePhotos.types'
 import { appTheme } from '../../../theme/Theme'
 
@@ -14,11 +8,27 @@ const AddMorePhotoStyles = styled.div<AddMorePhotosProps>`
   justify-content: center;
   align-items: center;
   background: ${appTheme.colors.DEFAULT_BG};
-  height: ${(props) => getAddMoreContainerHeight(props.size)};
-  width: ${(props) => getAddMoreContainerWidth(props.size)};
   border-radius: 0.5rem;
   ${(props) => props.margin && `margin: ${props.margin}`};
   position: relative;
+
+  &.container-large {
+    height: 40rem;
+    width: 100%;
+
+    svg {
+      font-size: 6rem;
+    }
+  }
+
+  &.container-small {
+    height: 5rem;
+    width: 8rem;
+
+    svg {
+      font-size: 2rem;
+    }
+  }
 
   button {
     position: absolute;
@@ -30,7 +40,6 @@ const AddMorePhotoStyles = styled.div<AddMorePhotosProps>`
 
     svg {
       margin-right: 0 !important;
-      font-size: ${(props) => getAddMoreContainerFontSize(props.size)};
     }
   }
 `

@@ -37,30 +37,6 @@ export const appTheme = {
     FONT_WEIGHT_MEDIUM: '500',
     FONT_WEIGHT_BOLD: '800',
   },
-
-  addMoreContainer: {
-    small: {
-      height: '5rem',
-      width: '8rem',
-      fontSize: '2rem',
-    },
-    large: {
-      height: '40rem',
-      width: '100%',
-      fontSize: '6rem',
-    },
-  },
-
-  photoItem: {
-    small: {
-      height: '5rem',
-      width: '8rem',
-    },
-    large: {
-      height: '40rem',
-      width: 'auto',
-    },
-  },
 }
 
 export type AppTheme = typeof appTheme

@@ -69,10 +69,12 @@ const PhotoReviewWrapper: FC = () => {
                 </Grid>
 
                 <Divider />
-                <Text textAlign="center" margin="4rem 0" data-test="photo-review-note" className="main-text">
-                  Click on the <FontAwesomeIcon icon={faPlus} /> in order to get image
+                <Grid margin="4rem 0" direction="column">
+                  <Text textAlign="center" data-test="photo-review-note" className="main-text">
+                    Click on the <FontAwesomeIcon icon={faPlus} /> in order to get image
+                  </Text>
                   <Text textAlign="center">recommendations</Text>
-                </Text>
+                </Grid>
               </>
             )}
           </Grid>
